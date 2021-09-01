@@ -38,5 +38,4 @@ see the `example` app for more details.
 
 Live Demo: https://deepak786.github.io/in_validator_demo
 
-Don't hesitate to buy me a coffee.
-<a href="https://www.buymeacoffee.com/deepakdroid" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="150px"></a>
+Don't hesitate to buy me a coffee.  <a href="https://www.buymeacoffee.com/deepakdroid" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="150px"></a>

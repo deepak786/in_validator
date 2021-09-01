@@ -1,3 +1,3 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* validate PAN, AADHAAR, DRIVING LICENSE Number.

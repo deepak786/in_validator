@@ -36,8 +36,12 @@ class AadhaarValidator {
   ///
   /// So add space after every 4 digits.
   String? format(String? aadhaar) {
+    if (aadhaar == null) return null;
+
+    // remove the spaces from aadhaar
+    aadhaar = aadhaar.replaceAll(RegExp(r"\s+"), "");
     return aadhaar
-        ?.replaceAllMapped(RegExp(r".{4}"), (match) => "${match.group(0)} ")
+        .replaceAllMapped(RegExp(r".{4}"), (match) => "${match.group(0)} ")
         .trim();
   }
 }

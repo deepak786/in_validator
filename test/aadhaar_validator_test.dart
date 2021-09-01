@@ -39,5 +39,6 @@ void main() {
     expect(aadhaarValidator.format("9999999999"), "9999 9999 99");
     expect(aadhaarValidator.format("99999999999"), "9999 9999 999");
     expect(aadhaarValidator.format("999999999999"), "9999 9999 9999");
+    expect(aadhaarValidator.format("9999 9999 9999"), "9999 9999 9999");
   });
 }

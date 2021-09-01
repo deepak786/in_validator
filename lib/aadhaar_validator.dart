@@ -10,8 +10,10 @@
 class AadhaarValidator {
   /// function to check if the provider [aadhaar] is valid or not.
   ///
-  /// return true if the [aadhaar] sees to be valid
-  bool isValid(String aadhaar) {
+  /// return true if the [aadhaar] seems to be valid.
+  bool isValid(String? aadhaar) {
+    if (aadhaar == null) return false;
+
     // remove the spaces from aadhaar
     String aadhaarWithoutSpace = aadhaar.replaceAll(RegExp(r"\s+"), "");
 
@@ -33,9 +35,10 @@ class AadhaarValidator {
   /// AADHAAR format is 9999 9999 9999
   ///
   /// So add space after every 4 digits.
-  String format(String aadhaar) {
-    return aadhaar.replaceAllMapped(
-        RegExp(r".{4}"), (match) => "${match.group(0)} ").trim();
+  String? format(String? aadhaar) {
+    return aadhaar
+        ?.replaceAllMapped(RegExp(r".{4}"), (match) => "${match.group(0)} ")
+        .trim();
   }
 }
 

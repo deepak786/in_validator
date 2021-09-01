@@ -27,8 +27,8 @@ class PANValidator {
   /// function to check if the PAN has valid format or not.
   ///
   /// returns true if the PAN has valid format.
-  bool isValid(String pan) {
-    if (pan.length != 10) {
+  bool isValid(String? pan) {
+    if (pan == null || pan.length != 10) {
       // PAN length is not 10
       return false;
     }
@@ -41,7 +41,7 @@ class PANValidator {
   /// So this function will return the provided PAN by making each letter as uppercase.
   ///
   /// e.g: aaaaa9999a to AAAAA9999A
-  String format(String pan) {
-    return pan.toUpperCase();
+  String? format(String? pan) {
+    return pan?.toUpperCase();
   }
 }

@@ -33,7 +33,7 @@ class PANValidator {
       return false;
     }
 
-    RegExp panRegEx = RegExp(r'[A-Z]{5}[0-9]{4}[A-Z]{1}');
+    RegExp panRegEx = RegExp(r'[A-Za-z]{5}[0-9]{4}[A-Za-z]{1}');
     return panRegEx.hasMatch(pan);
   }
 

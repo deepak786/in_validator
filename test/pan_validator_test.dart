@@ -17,6 +17,7 @@ void main() {
     expect(panValidator.isValid('XXXXXXXXXX'), false);
     expect(panValidator.isValid('9999999999'), false);
     expect(panValidator.isValid('AAAAA9999A'), true);
+    expect(panValidator.isValid('aaaaa9999a'), true);
   });
 
   // format

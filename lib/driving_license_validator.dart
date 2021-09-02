@@ -1,19 +1,28 @@
-/// validate the Driving license number.
-///
-/// The valid Indian driving license number must satisfy the following conditions:
-///
-/// 1. It should be 16 characters long (including space or hyphen (-)).
-/// 2. The driving license number can be entered in any of the following formats:
-/// HR-0619850034761
-///  OR
-/// HR06 19850034761
-/// 3. The first two characters should be upper case alphabets that represent the state code.
-/// 4. The next two characters should be digits that represent the RTO code.
-/// 5. The next four characters should be digits that represent the license issued year.
-/// 6. The next seven characters should be any digits from 0-9.
-///
-/// See https://www.geeksforgeeks.org/how-to-validate-indian-driving-license-number-using-regular-expression/
 class DrivingLicenseValidator {
+  /// validate the Driving license number.
+  ///
+  /// The valid Indian driving license number must satisfy the following conditions:
+  ///
+  /// 1. It should be 16 characters long (including space or hyphen (-)).
+  /// 2. The driving license number can be entered in any of the following formats:
+  /// HR-0619850034761
+  ///  OR
+  /// HR06 19850034761
+  /// 3. The first two characters should be upper case alphabets that represent the state code.
+  /// 4. The next two characters should be digits that represent the RTO code.
+  /// 5. The next four characters should be digits that represent the license issued year.
+  /// 6. The next seven characters should be any digits from 0-9.
+  ///
+  /// See https://www.geeksforgeeks.org/how-to-validate-indian-driving-license-number-using-regular-expression/
+  factory DrivingLicenseValidator() {
+    _instance ??= DrivingLicenseValidator._();
+    return _instance!;
+  }
+
+  DrivingLicenseValidator._();
+
+  static DrivingLicenseValidator? _instance;
+
   /// function to check if the provided [dlNumber] is valid or not.
   ///
   /// returns true if the [dlNumber] seems to be valid.

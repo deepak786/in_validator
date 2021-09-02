@@ -77,6 +77,7 @@ class VerhoeffAlgorithm {
   // inv(j)
   // The inverse table inv represents the multiplicative inverse of a digit,
   // that is, the value that satisfies d(j, inv(j)) = 0.
+  // ignore: unused_field
   static const _inv = [
     0,
     4,

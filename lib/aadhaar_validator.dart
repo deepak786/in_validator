@@ -1,13 +1,22 @@
-/// validate the AADHAAR number.
-///
-/// 1. It should have 12 digits.
-/// 2. It should not start with 0 and 1.
-/// 3. It should not contain any alphabet and special characters.
-/// 4. It should be valid with Verhoeff algorithm (https://en.wikipedia.org/wiki/Verhoeff_algorithm)
-///
-/// The first 11 digits of the 12 digit Aadhaar number displayed on your Aadhaar card is the actual UID Number and
-/// the 12th digit is the checksum associated with Verhoeff Algorithm scheme.
 class AadhaarValidator {
+  /// validate the AADHAAR number.
+  ///
+  /// 1. It should have 12 digits.
+  /// 2. It should not start with 0 and 1.
+  /// 3. It should not contain any alphabet and special characters.
+  /// 4. It should be valid with Verhoeff algorithm (https://en.wikipedia.org/wiki/Verhoeff_algorithm)
+  ///
+  /// The first 11 digits of the 12 digit Aadhaar number displayed on your Aadhaar card is the actual UID Number and
+  /// the 12th digit is the checksum associated with Verhoeff Algorithm scheme.
+  factory AadhaarValidator() {
+    _instance ??= AadhaarValidator._();
+    return _instance!;
+  }
+
+  AadhaarValidator._();
+
+  static AadhaarValidator? _instance;
+
   /// function to check if the provider [aadhaar] is valid or not.
   ///
   /// return true if the [aadhaar] seems to be valid.

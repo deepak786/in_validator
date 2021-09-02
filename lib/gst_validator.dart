@@ -67,10 +67,11 @@ class GSTValidator {
 
     int sum = n.fold(0, (p, c) => p + c);
 
-    var csum;
-    csum = 36 - sum % 36;
-    csum = csum < 10 ? csum.toString() : String.fromCharCode(csum + 55);
-    return csum == check;
+    var checkSum = 36 - sum % 36;
+    var checkSumDigit = checkSum < 10
+        ? checkSum.toString()
+        : String.fromCharCode(checkSum + 55);
+    return checkSumDigit == check;
   }
 
   /// format the [gst].

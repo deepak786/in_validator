@@ -34,8 +34,8 @@ class GSTValidator {
       return false;
     }
 
-    RegExp gstRegEx =
-        RegExp(r"^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$");
+    RegExp gstRegEx = RegExp(
+        r"^[0-9]{2}[A-Za-z]{5}[0-9]{4}[A-Za-z]{1}[1-9A-Za-z]{1}(Z|z)[0-9A-Za-z]{1}$");
     if (gstRegEx.hasMatch(gst)) {
       // now validate the checksum digit
       return _validCheckSum(gst);

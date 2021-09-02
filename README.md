@@ -7,6 +7,7 @@ It just validates the numbers with some regular expressions and algorithms.
 - validate PAN
 - validate AADHAAR
 - validate Driving License Number
+- validate GST Number
 
 ## Getting started
 
@@ -30,6 +31,9 @@ AadhaarValidator().isValid('999941057058');
 
 // DRIVING LICENCSE
 DrivingLicenseValidator().isValid('HR-0620220034761');
+
+// GST
+GSTValidator().isValid('10AABCU9603R1Z2');
 
 ```
 see the `example` app for more details.

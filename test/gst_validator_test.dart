@@ -18,6 +18,8 @@ void main() {
     expect(gstValidator.isValid('A0XXXXX9999X9Z0'), false);
     expect(gstValidator.isValid('18AABCU9603R1ZM'), true);
     expect(gstValidator.isValid('10AABCU9603R1Z2'), true);
+    expect(gstValidator.isValid('10aabcu9603R1z2'), true);
+    expect(gstValidator.isValid('10Aabcu9603r1Z2'), true);
   });
 
   // format

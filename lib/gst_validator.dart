@@ -46,6 +46,9 @@ class GSTValidator {
 
   /// validate the checksum of
   bool _validCheckSum(String gstNum) {
+    // format the gst number first
+    gstNum = format(gstNum)!;
+
     String check = gstNum.substring(gstNum.length - 1);
     String lmo = gstNum.substring(0, 14);
 

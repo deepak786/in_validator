@@ -1,6 +1,6 @@
 name: in_validator
 description: package to validate Indian identification numbers such as PAN, AADHAAR, GST, DRIVING LICENSE, etc.
-version: 0.0.2
+version: 1.0.0
 homepage: https://github.com/deepak786/in_validator
 
 environment:

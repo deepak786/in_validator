@@ -14,6 +14,7 @@ class _ExampleState extends State<Example> {
   final TextEditingController _aadhaarCtrl = TextEditingController();
   final TextEditingController _drivingLicenseCtrl = TextEditingController();
   final TextEditingController _gstCtrl = TextEditingController();
+  final TextEditingController _passportCtrl = TextEditingController();
 
   @override
   void initState() {
@@ -27,6 +28,7 @@ class _ExampleState extends State<Example> {
     _aadhaarCtrl.dispose();
     _drivingLicenseCtrl.dispose();
     _gstCtrl.dispose();
+    _passportCtrl.dispose();
   }
 
   @override
@@ -101,6 +103,20 @@ class _ExampleState extends State<Example> {
                   bool isValid = gst.isValid(_gstCtrl.text);
                   if (isValid) {
                     _gstCtrl.text = gst.format(_gstCtrl.text)!;
+                  }
+
+                  return isValid;
+                },
+              ),
+              // Passport
+              getTextField(
+                "Passport",
+                _passportCtrl,
+                () {
+                  PassportValidator passport = PassportValidator();
+                  bool isValid = passport.isValid(_passportCtrl.text);
+                  if (isValid) {
+                    _passportCtrl.text = passport.format(_passportCtrl.text)!;
                   }
 
                   return isValid;
